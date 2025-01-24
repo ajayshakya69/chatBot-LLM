@@ -6,8 +6,7 @@ def get_all_users():
 
 
 def get_user_data(email):
-    print(email)
-    return 
+    return User.query.filter_by(email=email).first()
 
 
 
