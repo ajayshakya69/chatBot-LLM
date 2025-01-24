@@ -1,5 +1,5 @@
 from models.user import User
-from db import db
+from  lib.db import db
 
 def get_all_users():
     return [user.to_dict() for user in User.query.all()]

@@ -1,7 +1,8 @@
 from flask import Flask, request, session
-from db import db
+from lib.db import db
 from routes import init_routes
 from dotenv import load_dotenv
+import models
 import os
 
 app = Flask(__name__)
@@ -37,8 +38,9 @@ def get_name():
         return f"<p>Logged in{session["name"]}</p>"
 
 @app.get("/createTable")
-def create_table():
+def create_db_table():
     create_tables()
+    print("Table created")
     return "<p>Table created</p>"
 
 

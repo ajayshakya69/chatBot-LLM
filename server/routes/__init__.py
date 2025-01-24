@@ -1,5 +1,5 @@
-from .user import user
+from .auth import auth
 
 
 def init_routes(app):
-    app.register_blueprint(user, url_prefix="/users")
+    app.register_blueprint(auth, url_prefix="/api/auth")
